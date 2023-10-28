@@ -60,7 +60,7 @@ app.delete("api/notes/:Id", async (req, res) => {
   }
   try {
     await prisma.note.delete({
-      where: {id},
+      where: {id:Id},
     });
     res.status(400).send("valid integer please");
   } catch (error) {
